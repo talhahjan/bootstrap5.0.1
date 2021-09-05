@@ -34,11 +34,7 @@
   }
 }
 
-
 /* nav-mdb nav inspired by materlize css   */
-
-
-
 
 //
 // Tabs
@@ -48,32 +44,32 @@ matewrlize css tab menu without tab menu
 
 
 */
-.nav-tabs,.nav-mdb {
-margin: 0;
-padding: 0;
-height: 35px;
+.nav-tabs,
+.nav-mdb {
+  margin: 0;
+  padding: 0;
+  height: 35px;
   .nav-link {
-margin-bottom: -$nav-tabs-border-width;
-background: none;
-border: none;
-height: 100%;
-color: #000;
-transition: border 2sm;
-&:hover{
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-}
+    margin-bottom: -$nav-tabs-border-width;
+    background: none;
+    border: none;
+    height: 100%;
+    color: #000;
+    transition: border 2sm;
+    &:hover {
+      border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    }
 
-&.active{
-border-bottom: 2px solid var(--bs-primary);
-font-weight: 600;
-}
-&.disabled {
+    &.active {
+      border-bottom: 2px solid var(--bs-primary);
+      font-weight: 600;
+    }
+    &.disabled {
       color: $nav-link-disabled-color;
       background-color: transparent;
       border-color: transparent;
     }
   }
-
 
   .dropdown-menu {
     // Make dropdown border overlap tab border
@@ -82,7 +78,6 @@ font-weight: 600;
     @include border-top-radius(0);
   }
 }
-
 
 //
 // Pills
@@ -101,7 +96,6 @@ font-weight: 600;
     @include gradient-bg($nav-pills-link-active-bg);
   }
 }
-
 
 //
 // Justified variants
@@ -131,7 +125,6 @@ font-weight: 600;
   }
 }
 
-
 // Tabbable tabs
 //
 // Hide tabbable panes to start, show them when `.active`
@@ -143,7 +136,4 @@ font-weight: 600;
   > .active {
     display: block;
   }
-
 }
-
-

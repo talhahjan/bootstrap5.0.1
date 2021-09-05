@@ -78,11 +78,19 @@
 
 /* product page css start */
 .page-product-listing {
-  margin-top: 100px;
+  margin-top: 60px;
   max-width: 960px;
-
-  & .filter-sort {
-    max-width: 960px;
+  .product-listing {
+    .filter-sort {
+      max-width: 960px;
+      position: sticky;
+      top: 50px;
+      left: 0;
+      z-index: 3;
+      background-color: #eeeeee;
+      height: 50px;
+      padding: 5px 0;
+    }
   }
 
   & #SortMenuButton::before {
@@ -211,8 +219,24 @@
         }
       }
     }
+
     .btn-buy {
       color: initial;
+    }
+
+    .img-display {
+      .nav-link.active {
+        background: none;
+      }
+
+      .p-pic {
+        max-width: 100%;
+        max-height: 100%;
+      }
+      .img-select {
+        width: 60px;
+        height: 60px;
+      }
     }
   }
 }

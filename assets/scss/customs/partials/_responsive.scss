@@ -6,12 +6,6 @@
   .wrapper main {
     padding-bottom: 80px;
   }
-  .btn-buy {
-    position: fixed;
-    left: 0;
-    bottom: 50px;
-    width: 100%;
-  }
 }
 
 // Small devices (landscape phones, less than 768px)
@@ -36,6 +30,12 @@
 
   .card-login {
     max-width: 400px;
+  }
+  .btn-buy {
+    position: sticky;
+    left: 0;
+    bottom: 50px;
+    width: 100%;
   }
 }
 

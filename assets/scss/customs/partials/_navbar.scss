@@ -7,10 +7,6 @@
   height: 50px;
   box-sizing: border-box;
   max-width: 960px;
-  .navbar-brand img {
-    @include responsive-img(100px);
-    padding-left: 10px;
-  }
 
   .navbar-brand {
     font-family: "courgette", cursive;

@@ -46,7 +46,7 @@ section .card .cart-title {
 
 /* css for header tag */
 header {
-  background-color: #fff; }
+  background-color: #eeeeee; }
   header .navbar {
     margin: auto; }
   header .search-bar {
@@ -87,12 +87,6 @@ header {
   box-sizing: border-box;
   max-width: 960px;
   /*close navbar-nav  */ }
-  .navbar .navbar-brand img {
-    width: 100%;
-    max-width: 100px;
-    min-width: 120px;
-    height: auto;
-    padding-left: 10px; }
   .navbar .navbar-brand {
     font-family: "courgette", cursive;
     font-weight: 700;

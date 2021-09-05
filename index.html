@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap CSS -->
+        <link href="assets/css/bootstrap.css" rel="stylesheet">
+        <!-- google fonts  -->
+        <link rel="stylesheet" type="text/css"
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Courgette: 400,500,600|Material+Icons" />
+        <!-- custom css styling  -->
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <!-- font awesome  -->
+        <link rel="stylesheet" href="assets/css/fontawsome-all.css.css" />
+        <!-- OwlCarousel css File -->
+        <link rel="stylesheet" href="assets/css/owlcarousel/owl.carousel.min.css">
+        <link rel="stylesheet" href="assets/css/owlcarousel/owl.theme.default.min.css">
+        <title>Hello, world!</title>
+        <style>
+        </style>
+    </head>
+    <body>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Categories/Departments</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div> Some text as placeholder. In real life you can have the elements you have chosen. Like, text,
+                    images, lists, etc. </div>
+                <div class="dropdown mt-3">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-bs-toggle="dropdown"> Dropdown button </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper welcome-page">
+            <!-- header section  -->
+            <header>
+                <!-- navbar -->
+                <nav class="navbar navbar-expand fixed-top">
+                    <div class="container">
+                        <a class="btn btn-link" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                            aria-controls="offcanvasExample"> <i class="fa fa-bars"></i> </a>
+                        <a href="#" class="navbar-brand" href="#"> T.J Shoes </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <div class="search-bar mx-auto">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="dropdown">
+                                            <a class="btn btn-primary dropdown-toggle" href="#" role="button"
+                                                id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                                All </a>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink"
+                                                id="categorList">
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Electronic Items</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Fashion</a></li>
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Medicine & HealthCare</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" id="search-query" placeholder="search ..."
+                                        aria-label="Username" aria-describedby="basic-addon1">
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-primary">
+                                            <i class="material-icons">search</i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item d-md-none">
+                                    <a class="nav-link" href="#" id="search-btn"><i class="material-icons">
+                                            search</i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="material-icons"> local_mall </i><span
+                                            class="d-none d-lg-inline text-nowrap">Cart</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="material-icons"> favorite </i><span
+                                            class="d-none d-lg-inline text-nowrap">favorite</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <div class="dropdown animate user-widget" aria-labelledby="dropdownMenuButton1"
+                                        style="z-index: 100;width: 100%">
+                                        <a class="nav-link" href="#" type="button" id="dropdownMenuButton1"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="material-icons" aria-expanded="true">account_circle</i>
+                                            <span class="d-none d-md-inline">Hi Guest !</span></a>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <div class="login">
+                                                <div>
+                                                    <p class="text-muted mb-2 float-center">Welcome To T.J Shoes</p>
+                                                    <button type="button"
+                                                        class="btn btn-sm btn-block btn-primary col-12 my-2">Sign
+                                                        In</button>
+                                                    <br>
+                                                    <p class="text-muted text-center">Use Social Accounts</p>
+                                                </div>
+                                                <div class="social-line text-center">
+                                                    <a href="login/facebook"
+                                                        class="btn-social btn-outline-facebook btn-social-circle waves-effect waves-light m-1">
+                                                        <i class="fab fa-facebook-f"></i>
+                                                    </a>
+                                                    <a href="login/google"
+                                                        class="btn-social btn-outline-google btn-social-circle waves-effect waves-light m-1"><i
+                                                            class="fab fa-google-plus-g"></i></a>
+                                                    <a href="login/instagram"
+                                                        class="btn-social btn-outline-instagram waves-effect btn-social-circle waves-light m-1"><i
+                                                            class="fab fa-instagram"></i></a>
+                                                </div>
+                                                <br />
+                                                <p class="text-muted mb-2 text-left">New customer ?</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-sm col-12 my-2">Register </button>
+                                            </div>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item mx-auto" href="#">My Orders</a>
+                                            <a class="dropdown-item mx-auto" href="#">My Wish list</a>
+                                            <a class="dropdown-item mx-auto" href="#">My Favorite Items</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav> <!-- nav bar  -->
+                <!-- carousel starts  -->
+                <div id="carouselExampleIndicators" class="carousel slide mt-10 border-circle" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="assets/images/slide1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/images/slide2.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/images/slide3.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <!-- carousel ends  -->
+                <!-- header ends  -->
+            </header>
+            <main class="mt-2">
+                <!-- slider latest --->
+                <section id="slider-popular">
+                    <i class="material-icons btn-next" aria-expanded="false" title="next left">chevron_left</i>
+                    <i class="material-icons btn-prev" aria-expanded="false" title="right prev">chevron_right</i>
+                    <div class="card mx-2">
+                        <h4 class="cart-title">Featured </h4>
+                        <div class="card-body">
+                            <!-- Set up your HTML -->
+                            <div class="owl-carousel  margin-0 padding-0">
+                                <!-- single product -->
+                                <div class="card-product">
+                                    <div class="imgBx">
+                                        <img src="assets/images/20.jpg" alt="Product Image">
+                                        <ul class="action">
+                                            <li><i class="material-icons" aria-hidden="true">favorite</i><span>Add to
+                                                    WishList</span>
+                                            </li>
+                                            <li><i class="material-icons" aria-hidden="true">local_mall</i><span>Add to
+                                                    cart</span></i>
+                                            </li>
+                                            <li><i class="material-icons" aria-hidden="true">visibility</i><span>View
+                                                    Details</span></i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="content">
+                                        <div class="p_name">
+                                            <h3>Rebook Shoes</h3>
+                                        </div>
+                                        <div class="price_rating">
+                                            <span class="prices">
+                                                <h2 class="actual">12,111</h2>
+                                                <h2 class="discounted">12,111</h2>
+                                            </span>
+                                            <div class="rating">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star gray" aria-hidden="true"></i>
+                                                <i class="fa fa-star gray" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- single product -->
+                                <!-- single product -->
+                                <div class="card-product">
+                                    <div class="imgBx">
+                                        <img src="assets/images/1.jpg" alt="Product Image">
+                                        <ul class="action">
+                                            <li><i class="material-icons" aria-hidden="true">favorite</i><span>Add to
+                                                    WishList</span>
+                                            </li>
+                                            <li><i class="material-icons" aria-hidden="true">local_mall</i><span>Add to
+                                                    cart</span></i>
+                                            </li>
+                                            <li><i class="material-icons" aria-hidden="true">visibility</i><span>View
+                                                    Details</span></i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="content">
+                                        <div class="p_name">
+                                            <h3>Rebook Shoes</h3>
+                                        </div>
+                                        <div class="price_rating">
+                                            <span class="prices">
+                                                <h2 class="actual">12,111</h2>
+                                                <h2 class="discounted">12,111</h2>
+                                            </span>
+                                            <div class="rating">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star gray" aria-hidden="true"></i>
+                                                <i class="fa fa-star gray" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- single product -->
+                                <!-- single product -->
+                                <div class="card-product">
+                                    <div class="imgBx">
+                                        <img src="assets/images/2.jpg" alt="Product Image">
+                                        <ul class="action">
+                                            <li><i class="material-icons" aria-hidden="true">favorite</i><span>Add to
+                                                    WishList</span>
+                                            </li>
+                                            <li><i class="material-icons" aria-hidden="true">local_mall</i><span>Add to
+                                                    cart</span></i>
+                                            </li>
+                                            <li><i class="material-icons" aria-hidden="true">visibility</i><span>View
+                                                    Details</span></i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="content">
+                                        <div class="p_name">
+                                            <h3>Rebook Shoes</h3>
+                                        </div>
+                                        <div class="price_rating">
+                                            <span class="prices">
+                                                <h2 class="actual">12,111</h2>
+                                                <h2 class="discounted">12,111</h2>
+                                            </span>
+                                            <div class="rating">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star gray" aria-hidden="true"></i>
+                                                <i class="fa fa-star gray" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- single product -->
+                                <!-- single product -->
+                                <div class="card-product">
+                                    <div class="imgBx">
+                                        <img src="assets/images/3.jpg" alt="Product Image">
+                                        <ul class="action">
+                                            <li><i class="fa fa-heart" aria-hidden="true"><span>Add to
+                                                        WishList</span></i></li>
+                                            <li><i class="fa fa-heart" aria-hidden="true"><span>Add to cart</span></i>
+                                            </li>
+                                            <li><i class="fa fa-shopping-cart" aria-hidden="true"><span>View
+                                                        Details</span></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="content">
+                                        <div class="p_name">
+                                            <h3>Rebook Shoes</h3>
+                                        </div>
+                                        <div class="price_rating">
+                                            <span class="prices">
+                                                <h2 class="actual">12,111</h2>
+                                                <h2 class="discounted">12,111</h2>
+                                            </span>
+                                            <div class="rating">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star gray" aria-hidden="true"></i>
+                                                <i class="fa fa-star gray" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- single product -->
+                                <!-- single product -->
+                                <div class="card-product">
+                                    <div class="imgBx">
+                                        <img src="assets/images/4.jpg" alt="Product Image">
+                                        <ul class="action">
+                                            <li><i class="material-icons" aria-hidden="true">favorite</i><span>Add to
+                                                    WishList</span>
+                                            </li>
+                                            <li><i class="material-icons" aria-hidden="true">local_mall</i><span>Add to
+                                                    cart</span></i>
+                                            </li>
+                                            <li><i class="material-icons" aria-hidden="true">visibility</i><span>View
+                                                    Details</span></i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="content">
+                                        <div class="p_name">
+                                            <h3>Rebook Shoes</h3>
+                                        </div>
+                                        <div class="price_rating">
+                                            <span class="prices">
+                                                <h2 class="actual">12,111</h2>
+                                                <h2 class="discounted">12,111</h2>
+                                            </span>
+                                            <div class="rating">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star gray" aria-hidden="true"></i>
+                                                <i class="fa fa-star gray" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- single product -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- slider popular ends-->
+            </main>
+            <!-- main section end  -->
+            <!-- footer -->
+            <!-- footer for small screen -->
+            <!-- footer for small screen -->
+            <footer class="sm fixed-bottom d-sm-block d-md-none shadow bg-body">
+                <ul class="nav justify-content-between departments">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"><i class="material-icons"
+                                aria-hidden="true">home</i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="material-icons" aria-hidden="true">favorite</i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="material-icons" aria-hidden="true">local_mall</i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="material-icons" aria-hidden="true">account_circle</i></a>
+                    </li>
+                </ul>
+            </footer>
+            <!-- footer for small screen   -->
+            <!-- footer for small screen  -->
+            <footer class="bg-primary d-none d-md-block " id="footer">
+                <div class="container">
+                    <div class="row">
+                        <aside class="col-md col-6">
+                            <h6 class="title">Brands</h6>
+                            <ul class="list-unstyled">
+                                <li> <a href="#">Adidas</a></li>
+                                <li> <a href="#">Puma</a></li>
+                                <li> <a href="#">Reebok</a></li>
+                                <li> <a href="#">Nike</a></li>
+                            </ul>
+                        </aside>
+                        <aside class="col-md col-6">
+                            <h6 class="title">Company</h6>
+                            <ul class="list-unstyled">
+                                <li> <a href="#">About us</a></li>
+                                <li> <a href="#">Career</a></li>
+                                <li> <a href="#">Find a store</a></li>
+                                <li> <a href="#">Rules and terms</a></li>
+                                <li> <a href="#">Sitemap</a></li>
+                            </ul>
+                        </aside>
+                        <aside class="col-md col-6">
+                            <h6 class="title">Help</h6>
+                            <ul class="list-unstyled">
+                                <li> <a href="#">Contact us</a></li>
+                                <li> <a href="#">Money refund</a></li>
+                                <li> <a href="#">Order status</a></li>
+                                <li> <a href="#">Shipping info</a></li>
+                                <li> <a href="#">Open dispute</a></li>
+                            </ul>
+                        </aside>
+                        <aside class="col-md col-6">
+                            <h6 class="title">Account</h6>
+                            <ul class="list-unstyled">
+                                <li> <a href="#"> User Login </a></li>
+                                <li> <a href="#"> User register </a></li>
+                                <li> <a href="#"> Account Setting </a></li>
+                                <li> <a href="#"> My Orders </a></li>
+                            </ul>
+                        </aside>
+                        <aside class="col-md">
+                            <h6 class="title">Social</h6>
+                            <ul class="list-unstyled">
+                                <li><a href="#"> <i class="fab fa-facebook"></i> Facebook </a></li>
+                                <li><a href="#"> <i class="fab fa-twitter"></i> Twitter </a></li>
+                                <li><a href="#"> <i class="fab fa-instagram"></i> Instagram </a></li>
+                                <li><a href="#"> <i class="fab fa-youtube"></i> Youtube </a></li>
+                            </ul>
+                        </aside>
+                    </div> <!-- row.// -->
+                    <!-- footer-top.// -->
+                    <div class="footer-bottom row">
+                        <div class="col-md-12 col-lg-6">
+                            <p class="policy">Privacy Policy - Terms of Use - User Information Legal Enquiry Guide </p>
+                        </div>
+                        <div class="col-md-12 col-lg-6">
+                            <p class="copyright"> &copy 2019 Company name, All rights reserved </p>
+                        </div>
+                    </div>
+                </div><!-- //container -->
+            </footer>
+            <!-- footer -->
+            <!-- header section -->
+        </div>
+        <!-- Optional JavaScript; choose one of the two! -->
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <script src="./assets/js/jquery/jquery-3.5.1.min.js"></script>
+        <!-- jQuery Plugins OwlCarousel  -->
+        <script src="assets/js/jquery/plugins/owl.carousel.js"></script>
+        <script>
+
+
+            let searchForm = document.querySelector('.search-bar')
+
+            document.querySelector('#search-btn').onclick = () => {
+                searchForm.classList.toggle('active');
+            }
+
+            window.onscroll = () => {
+                searchForm.classList.remove('active');
+            }
+
+            const initSlider = (selector) => {
+                //store section id 
+                let Section = $(selector);
+                // strore slider class under section ID
+                let SliderClass = Section.find('.owl-carousel');
+                //store Next Prev button under sectinID=>ClassID
+                let PrevBtn = Section.find('.btn-prev');
+                let NextBtn = Section.find('.btn-next');
+
+                //initliaze carousel under html section tag Id asign = selector
+                SliderClass.owlCarousel({
+                    navText: [PrevBtn, NextBtn],
+                    center: true,
+                    slideTransition: 'linear',
+                    loop: true,
+                    margin: 10,
+                    autoWidth: true,
+                    responsive: {
+                        0: {
+                            items: 2,
+                            nav: true
+                        },
+                        768: {
+                            items: 3,
+                            nav: true
+                        },
+
+                        992: {
+                            items: 4,
+                            nav: true
+                        },
+                    }
+                });
+
+
+            }
+
+
+
+
+            //iniliaze latest arrivals product slider 
+            initSlider('#slider-latest');
+
+            //iniliaze latest arrivals product slider 
+            initSlider('#slider-popular');
+
+
+
+
+
+        </script>
+    </body>
+</html>

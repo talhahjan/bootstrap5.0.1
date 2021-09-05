@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- google fonts  -->
+        <link rel="stylesheet" type="text/css"
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+        <!-- bootstrap file 5.0.0 alpha 2 -->
+        <link rel="stylesheet" href="assets/css/bootstrap.css" />
+        <!-- custom css styling  -->
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <!-- font awesome  -->
+        <link rel="stylesheet" href="assets/css/fontawsome-all.css.css" />
+        <!-- OwlCarousel css File -->
+        <link rel="stylesheet" href="assets/css/owlcarousel/owl.carousel.min.css" />
+        <link rel="stylesheet" href="assets/css/owlcarousel/owl.theme.default.min.css" />
+        <style>
+        </style>
+        <title>Hello, world!</title>
+    </head>
+    <body class="login-page">
+        <div class="page-content" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/hd-07.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand mx-auto w-100 navbar-transparent">
+                <div class="container">
+                    <div class="navbar-wrappr">
+                        <a class="navbar-brand" href="#">Home</a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="navbar-toggler-icon icon-bar"></span>
+                        <span class="navbar-toggler-icon icon-bar"></span>
+                        <span class="navbar-toggler-icon icon-bar"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a href="login" class="nav-link active">
+                                    <i class="material-icons">fingerprint</i> Sign In </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="register" class="nav-link"><i class="material-icons"
+                                        aria-hidden="true">person_add</i> Register </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+            <div class="card card-mdb mx-2  card-login">
+                <div class="card-header card-header-primary">
+                    <h5 class="text-center">Register With Social Account</h5>
+                </div>
+                <div class="card-body">
+                    <div class="social-line text-center">
+                        <a href="login/facebook"
+                            class="btn-social btn-outline-facebook btn-social-circle waves-effect waves-light m-1">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="login/google"
+                            class="btn-social btn-outline-google btn-social-circle waves-effect waves-light m-1"><i
+                                class="fab fa-google-plus-g"></i></a>
+                        <a href="login//instagram"
+                            class="btn-social btn-outline-instagram waves-effect btn-social-circle waves-light m-1"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                    <p class="text-muted text-center my-2">Or Be Classical</p>
+                    <form method="POST" action="login">
+                        <input type="hidden" name="_token" value="Wf6nP1bf7GD1Fh372Ou3YiaNpBX0Qaq6GrffIfUZ">
+                        <div class="inputWithIcon my-2">
+                            <input type="email" name="email" class="form-control" value=""
+                                placeholder="Enter E-mail Address" aria-label="email" id="email"
+                                aria-describedby="basic-addon1" autocomplete="on" required />
+                            <i class="material-icons">email</i>
+                        </div>
+                        <div class="inputWithIcon inputWithAction my-2">
+                            <input type="password" name="password" class="form-control" value=""
+                                placeholder="Enter Password" aria-label="Password" id="password"
+                                aria-describedby="basic-addon1" autocomplete="off" required />
+                            <i class="material-icons">fingerprint</i>
+                            <i class="fa fa-eye-slash action" id="eye"></i>
+                        </div>
+                        <div class="d-flex flex-column-reverse flex-lg-row justify-content-lg-between my-2">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label" for="flexCheckChecked"> Remember me </label>
+                            </div>
+                            <div>
+                                <a href="password/reset" class="text-form"> Forgot Your Password?</a>
+                            </div>
+                        </div>
+                        <div class="form-group my-2">
+                            <button class="btn col-12 btn-primary" type="submit">Register</button>
+                        </div> <!-- form-group// -->
+                    </form>
+                    <div class="py-1">
+                        <a href="register" class="text-dark"> All ready have an ID Login ?</a>
+                    </div>
+                </div>
+            </div>
+            <!-- footer  -->
+            <footer class="footer">
+                <div class="row m-1">
+                    <div class="col-sm">
+                        <p class="policy">Privacy Policy - Terms of Use </p>
+                    </div>
+                    <div class="col-sm-auto">
+                        <p class="copyright"> &copy 2019 Company name, All rights reserved </p>
+                    </div>
+                </div>
+            </footer>
+            <!-- footer  -->
+        </div>
+        <body>
+            <!-- Option 1: Bootstrap Bundle with Popper.js -->
+            <script src="assets/js/bootstrap/bootstrap.bundle.js" crossorigin="anonymous"></script>
+            <script>
+
+
+                /*  hide & fadeIn login card  */
+                $('.card').hide();
+                $('.card').fadeIn(3000);
+
+
+
+                const visibilityBtn = document.querySelector("#eye");
+
+
+
+
+                visibilityBtn.addEventListener("click", function () {
+                    currentClass = visibilityBtn.classList.contains('fa-eye');
+
+                    visibilityBtn.classList.toggle('fa-eye');
+                    visibilityBtn.classList.toggle('fa-eye-slash');
+                    document.getElementById("password").setAttribute("type", currentClass ? "password" : "text");
+
+                });
+
+
+
+            </script>
+        </body>
+</html>

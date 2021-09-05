@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- google fonts  -->
+        <link rel="stylesheet" type="text/css"
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+        <!-- bootstrap file 5.0.0 alpha 2 -->
+        <link rel="stylesheet" href="assets/css/bootstrap.css" />
+        <!-- custom css styling  -->
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <!-- font awesome  -->
+        <link rel="stylesheet" href="assets/css/fontawsome-all.css.css" />
+        <!-- OwlCarousel css File -->
+        <link rel="stylesheet" href="assets/css/owlcarousel/owl.carousel.min.css" />
+        <link rel="stylesheet" href="assets/css/owlcarousel/owl.theme.default.min.css" />
+        <style>
+            img {
+                width: 100%;
+                display: block;
+            }
+
+            .img-display {
+                overflow: hidden;
+            }
+
+            .img-showcase {
+                display: flex;
+                width: 100%;
+                transition: all 0.5s ease;
+            }
+
+            .img-showcase img {
+                min-width: 100%;
+            }
+
+            .img-select {
+                display: flex;
+            }
+
+            .img-item {
+                margin: 0.3rem;
+            }
+
+            .img-item:nth-child(1),
+            .img-item:nth-child(2),
+            .img-item:nth-child(3) {
+                margin-right: 0;
+            }
+
+            .img-item:hover {
+                opacity: 0.8;
+            }
+
+        </style>
+        <title>Hello, world!</title>
+    </head>
+    <body>
+        <!-- sidebar nav -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header text-dark">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Categories/Departments</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body text-dark bg-light m-0 p-0">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Category</li>
+                                    <li>Category</li>
+                                    <li>Category</li>
+                                    <li>Category</li>
+                                    <li>Category</li>
+                                    <li>Category</li>
+                                    <li>Category</li>
+                                    <li>Category</li>
+                                    <li>Category</li>
+                                    <li>Category</li>
+                                    <li>Category</li>
+                                    <li>Category</li>
+                                    <li>Category</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Women</button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the second item's accordion body.</strong> It is hidden by default,
+                                until the collapse plugin adds the appropriate classes that we use to style each
+                                element. These classes control the overall appearance, as well as the showing and hiding
+                                via CSS transitions. You can modify any of this with custom CSS or overriding our
+                                default variables. It's also worth noting that just about any HTML can go within the
+                                <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> Men
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until
+                                the collapse plugin adds the appropriate classes that we use to style each element.
+                                These classes control the overall appearance, as well as the showing and hiding via CSS
+                                transitions. You can modify any of this with custom CSS or overriding our default
+                                variables. It's also worth noting that just about any HTML can go within the though the
+                                transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- sidebar nav offcanvas  -->
+        <div class="wrapper page-product-detail">
+            <!-- header section  -->
+            <header class="fixed-top">
+                <!-- navbar -->
+                <nav class="navbar navbar-expand">
+                    <div class="container">
+                        <a class="btn btn-link" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                            aria-controls="offcanvasExample"> <i class="fa fa-bars"></i> </a>
+                        <a href="#" class="navbar-brand" href="#">T.j shoes </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <div class="search-bar mx-auto">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="dropdown">
+                                            <a class="btn btn-primary dropdown-toggle" href="#" role="button"
+                                                id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                                All </a>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink"
+                                                id="categorList">
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Electronic Items</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Fashion</a></li>
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Medicine & HealthCare</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" id="search-query" placeholder="search ..."
+                                        aria-label="Username" aria-describedby="basic-addon1">
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-primary">
+                                            <i class="material-icons">search</i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item d-md-none">
+                                    <a class="nav-link" href="#" id="search-btn"><i class="material-icons">
+                                            search</i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="material-icons"> local_mall </i><span
+                                            class="d-none d-lg-inline text-nowrap">Cart</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="material-icons"> favorite </i><span
+                                            class="d-none d-lg-inline text-nowrap">favorite</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <div class="dropdown animate user-widget" aria-labelledby="dropdownMenuButton1"
+                                        style="z-index: 100;width: 100%">
+                                        <a class="nav-link" href="#" type="button" id="dropdownMenuButton1"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="material-icons" aria-expanded="true">account_circle</i>
+                                            <span class="d-none d-md-inline">Hi Guest !</span></a>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <div class="login">
+                                                <div>
+                                                    <p class="text-muted mb-2 float-center">Welcome To T.J Shoes</p>
+                                                    <button type="button"
+                                                        class="btn btn-sm btn-block btn-primary col-12 my-2">Sign
+                                                        In</button>
+                                                    <br>
+                                                    <p class="text-muted text-center">Use Social Accounts</p>
+                                                </div>
+                                                <div class="social-line text-center">
+                                                    <a href="login/facebook"
+                                                        class="btn-social btn-outline-facebook btn-social-circle waves-effect waves-light m-1">
+                                                        <i class="fab fa-facebook-f"></i>
+                                                    </a>
+                                                    <a href="login/google"
+                                                        class="btn-social btn-outline-google btn-social-circle waves-effect waves-light m-1"><i
+                                                            class="fab fa-google-plus-g"></i></a>
+                                                    <a href="login/instagram"
+                                                        class="btn-social btn-outline-instagram waves-effect btn-social-circle waves-light m-1"><i
+                                                            class="fab fa-instagram"></i></a>
+                                                </div>
+                                                <br />
+                                                <p class="text-muted mb-2 text-left">New customer ?</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-sm col-12 my-2">Register </button>
+                                            </div>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item mx-auto" href="#">My Orders</a>
+                                            <a class="dropdown-item mx-auto" href="#">My Wish list</a>
+                                            <a class="dropdown-item mx-auto" href="#">My Favorite Items</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav> <!-- nav bar  -->
+            </header>
+            <!-- main content area start -->
+            <main class="product-detail">
+                <div class="container-fluid">
+                    <!-- breadcrup statr  -->
+                    <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+                        aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Women's Shoes</a></li>
+                            <li class="breadcrumb-item"><a href="#">Wedges</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Bridal Wadge</li>
+                        </ol>
+                    </nav>
+                    <!-- breadcrumb ends  -->
+                </div><!-- container-fluid  -->
+                <div class="container">
+                    <div class="card-product">
+                        <div class="row">
+                            <div class="col-sm col-md-6">
+                                <!-- card thumbnails  -->
+                                <div class="product-imgs">
+                                    <div class="img-display">
+                                        <div class="img-showcase">
+                                            <img src="assets/images/shoe_1.jpg" alt="shoe image">
+                                            <img src="assets/images/shoe_2.jpg" alt="shoe image">
+                                            <img src="assets/images/shoe_3.jpg" alt="shoe image">
+                                            <img src="assets/images/shoe_4.jpg" alt="shoe image">
+                                        </div>
+                                    </div>
+                                    <div class="img-select">
+                                        <div class="img-item">
+                                            <a href="#" data-id="1">
+                                                <img src="assets/images/shoe_1.jpg" alt="shoe image">
+                                            </a>
+                                        </div>
+                                        <div class="img-item">
+                                            <a href="#" data-id="2">
+                                                <img src="assets/images/shoe_2.jpg" alt="shoe image">
+                                            </a>
+                                        </div>
+                                        <div class="img-item">
+                                            <a href="#" data-id="3">
+                                                <img src="assets/images/shoe_3.jpg" alt="shoe image">
+                                            </a>
+                                        </div>
+                                        <div class="img-item">
+                                            <a href="#" data-id="4">
+                                                <img src="assets/images/shoe_4.jpg" alt="shoe image">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--  card thumbnail -->
+                            </div>
+                            <div class="col-sm col-lg-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <span class="share"><a href="#" class="btn" role="button"><i
+                                                    class="material-icons">share</i></a>
+                                            <a href="#" class="btn" role="button"><i
+                                                    class="material-icons">favorite_outline</i></a>
+                                        </span>
+                                        <div class="my-1"><a href="#" class="product-link">visit nike store</a>
+                                        </div>
+                                        <h5>Product Title <span class="badge text-danger">new</span></h5>
+                                        <span class="stock text-success"><i class="fa fa-pen"></i> In stock</span>
+                                        <div class="reviews">
+                                            <ul class="stars">
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star" style="color: gray"></i></li>
+                                            </ul>
+                                            <span>(64 reviews)</span>
+                                        </div>
+                                        <div class="p-list">
+                                            <span> Price : <i class="fa fa-inr"></i> <del class="text-danger"> 1399
+                                                </del>
+                                            </span>
+                                            <span class="price"> Rs. 699 </span>
+                                        </div>
+                                        <div class="color my-2">Color : <span> Dark Brown </span></div>
+                                        <span>Size </span>
+                                        <div class="sizes">
+                                            <span class="size">36</span>
+                                            <span class="size">37</span>
+                                            <span class="size">38</span>
+                                            <span class="size">39</span>
+                                            <span class="size">40</span>
+                                            <span class="size">41</span>
+                                            <span class="size">42</span>
+                                            <span class="size">43</span>
+                                        </div>
+                                    </div>
+                                    <div class="card py-1">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Description</h4>
+                                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ad non
+                                                quae cum corporis quasi voluptatum beatae inventore sequi voluptatibus
+                                                magnam nostrum quod eveniet quibusdam veniam, sapiente doloribus ea.
+                                                Praesentium eos aperiam rem, soluta cum enim numquam quibusdam saepe
+                                                vero fugit velit magni culpa unde quaerat doloremque qui voluptatibus
+                                                aspernatur! </p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex bd-highlight btn-buy my-2">
+                                        <div class="p-2 w-100 bd-highlight"><a id="btn-buy" href="#"
+                                                class="btn btn-primary btn-block w-100"><i
+                                                    class="material-icons">shopping_cart</i>Buy Now</a></div>
+                                        <div class="p-2 flex-shrink-1 bd-highlight"><a href="#"
+                                                class="btn btn-primary btn-block"><i class="material-icons">favorite</i>
+                                            </a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- main contents area ends  -->
+            <!-- footer for small screen -->
+            <footer class="sm fixed-bottom d-sm-block d-md-none shadow bg-body">
+                <ul class="nav justify-content-between departments">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"><i class="material-icons"
+                                aria-hidden="true">home</i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="material-icons" aria-hidden="true">favorite</i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="material-icons" aria-hidden="true">local_mall</i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="material-icons" aria-hidden="true">account_circle</i></a>
+                    </li>
+                </ul>
+            </footer>
+            <!-- footer -->
+            <footer id="footer" class="bg-primary d-none d-md-block">
+                <div class="container">
+                    <div class="row">
+                        <aside class="col-md col-6">
+                            <h6 class="title">Brands</h6>
+                            <ul class="list-unstyled">
+                                <li> <a href="#">Adidas</a></li>
+                                <li> <a href="#">Puma</a></li>
+                                <li> <a href="#">Reebok</a></li>
+                                <li> <a href="#">Nike</a></li>
+                            </ul>
+                        </aside>
+                        <aside class="col-md col-6">
+                            <h6 class="title">Company</h6>
+                            <ul class="list-unstyled">
+                                <li> <a href="#">About us</a></li>
+                                <li> <a href="#">Career</a></li>
+                                <li> <a href="#">Find a store</a></li>
+                                <li> <a href="#">Rules and terms</a></li>
+                                <li> <a href="#">Sitemap</a></li>
+                            </ul>
+                        </aside>
+                        <aside class="col-md col-6">
+                            <h6 class="title">Help</h6>
+                            <ul class="list-unstyled">
+                                <li> <a href="#">Contact us</a></li>
+                                <li> <a href="#">Money refund</a></li>
+                                <li> <a href="#">Order status</a></li>
+                                <li> <a href="#">Shipping info</a></li>
+                                <li> <a href="#">Open dispute</a></li>
+                            </ul>
+                        </aside>
+                        <aside class="col-md col-6">
+                            <h6 class="title">Account</h6>
+                            <ul class="list-unstyled">
+                                <li> <a href="#"> User Login </a></li>
+                                <li> <a href="#"> User register </a></li>
+                                <li> <a href="#"> Account Setting </a></li>
+                                <li> <a href="#"> My Orders </a></li>
+                            </ul>
+                        </aside>
+                        <aside class="col-md">
+                            <h6 class="title">Social</h6>
+                            <ul class="list-unstyled">
+                                <li><a href="#"> <i class="fab fa-facebook"></i> Facebook </a></li>
+                                <li><a href="#"> <i class="fab fa-twitter"></i> Twitter </a></li>
+                                <li><a href="#"> <i class="fab fa-instagram"></i> Instagram </a></li>
+                                <li><a href="#"> <i class="fab fa-youtube"></i> Youtube </a></li>
+                            </ul>
+                        </aside>
+                    </div> <!-- row.// -->
+                    <!-- footer-top.// -->
+                    <div class="footer-bottom row">
+                        <div class="col-md-12 col-lg-6">
+                            <p class="policy">Privacy Policy - Terms of Use - User Information Legal Enquiry Guide </p>
+                        </div>
+                        <div class="col-md-12 col-lg-6">
+                            <p class="copyright"> &copy 2019 Company name, All rights reserved </p>
+                        </div>
+                    </div>
+                </div><!-- //container -->
+            </footer>
+            <!-- footer -->
+        </div><!-- Option 1: Bootstrap Bundle with Popper.js -->
+        <script src="assets/js/bootstrap/bootstrap.bundle.js" crossorigin="anonymous"></script>
+        <!-- Jquery js file -->
+        <script src="assets/js/jquery/jquery-3.5.1.min.js"></script>
+        <!-- jQuery Plugins OwlCarousel  -->
+        <script src="assets/js/jquery/plugins/owl.carousel.js"></script>
+        <!-- custom es6 script -->
+        <script>
+
+
+            let searchForm = document.querySelector('.search-bar')
+
+            document.querySelector('#search-btn').onclick = () => {
+                searchForm.classList.toggle('active');
+            }
+
+            window.onscroll = () => {
+                searchForm.classList.remove('active');
+            }
+
+            const btnBuy = document.getElementById("btn-buy");
+
+            const sizes = document.querySelectorAll('.size');
+
+
+
+            for (let i = 0; i < sizes.length; i++) {
+
+                sizes[i].addEventListener('click', function () {
+                    this.classList.toggle('active');
+                });
+
+            }
+
+
+
+
+            btnBuy.addEventListener("click", function (sizeSelected) {
+
+                for (let i = 0; i < sizes.length; i++) {
+
+                    let check = sizes[1].classList.contains('active');
+                    if (check)
+                        return console.log('selected');
+                }
+                return console.log('not selected');
+            });
+
+
+
+
+        </script>
+    </body>
+</html>

@@ -1,3 +1,25 @@
+.offcanvas.categories {
+  .accordion-header {
+    button {
+      height: 80px;
+      line-height: 8px;
+      font-weight: 600;
+      font-size: 16px;
+      &.women {
+        background-color: #be4d25;
+        color: var(--bs-light);
+      }
+      &.men {
+        background-color: rgb(212, 172, 13);
+        color: var(--bs-light);
+      }
+      &.kid {
+        background-color: rgb(245, 183, 177);
+        color: var(--bs-light);
+      }
+    }
+  }
+}
 .filter {
   overflow-y: auto;
   .card {

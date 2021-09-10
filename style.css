@@ -1,0 +1,78 @@
+:root {
+  --line-border-fill: var(--bs-secondary);
+  --line-border-empty: #bdbdbd;
+}
+
+.circle i.login {
+  font-size: 1.8rem;
+  color: var(--bs-pink);
+}
+
+.circle i.cart {
+  font-size: 1.8rem;
+  color: var(--bs-secondary);
+}
+.circle i.detail {
+  font-size: 1.6rem;
+  color: var(--bs-info);
+}
+.circle i.payment {
+  font-size: 1.8rem;
+  color: var(--bs-primary);
+}
+
+.container {
+  text-align: center;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 30px;
+  max-width: 100%;
+  width: 350px;
+}
+
+.progress-container::before {
+  content: "";
+  background-color: var(--line-border-empty);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  z-index: -1;
+  transition: 0.8s ease;
+}
+
+.progress-bar {
+  content: "";
+  background-color: var(--line-border-fill);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 0%;
+  z-index: -1;
+  transition: 0.8s ease;
+}
+
+.circle {
+  background-color: #fff;
+  color: #999;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  border: 3px solid #b2bec3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.circle.active {
+  border-color: var(--line-border-fill);
+}

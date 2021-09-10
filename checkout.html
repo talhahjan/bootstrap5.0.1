@@ -17,6 +17,23 @@
         <link rel="stylesheet" href="assets/css/owlcarousel/owl.carousel.min.css" />
         <link rel="stylesheet" href="assets/css/owlcarousel/owl.theme.default.min.css" />
         <style>
+            .progress {
+                margin-top: 10px;
+                list-style: none;
+                display: flex;
+            }
+
+            .progress i {
+                color: initial;
+                /* font-size: 100px;
+                height: 100px;
+                line-height: 100px; */
+            }
+
+            .progress i.login {
+                color: var(--bs-danger);
+            }
+
         </style>
         <title>Hello, world!</title>
     </head>
@@ -92,7 +109,7 @@
             </div>
         </div>
         <!-- sidebar nav offcanvas  -->
-        <div class="wrapper page-product-detail">
+        <div class="wrapper page-checkout">
             <!-- header section  -->
             <header class="fixed-top">
                 <!-- navbar -->
@@ -196,134 +213,201 @@
                 </nav> <!-- nav bar  -->
             </header>
             <!-- main content area start -->
-            <main class="product-detail">
+            <main class="checkout">
                 <div class="container-fluid">
-                    <!-- breadcrup statr  -->
-                    <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
-                        aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Women's Shoes</a></li>
-                            <li class="breadcrumb-item"><a href="#">Wedges</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Bridal Wadge</li>
-                        </ol>
-                    </nav>
-                    <!-- breadcrumb ends  -->
-                </div><!-- container-fluid  -->
-                <div class="container">
-                    <div class="card-product">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <!-- card thumbnails  -->
-                                        <div class="d-flex align-items-start img-display">
-                                            <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist"
-                                                aria-orientation="vertical">
-                                                <a class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
-                                                    data-bs-target="#v-pills-home" type="button" role="tab"
-                                                    aria-controls="v-pills-home" aria-selected="true"><img
-                                                        src="/assets/images/shoe_1.jpg" class="img-select" alt=""></a>
-                                                <a class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
-                                                    data-bs-target="#v-pills-profile" type="button" role="tab"
-                                                    aria-controls="v-pills-profile" aria-selected="false"><img
-                                                        src="/assets/images/shoe_2.jpg" class="img-select" alt=""></a>
-                                                <a class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
-                                                    data-bs-target="#v-pills-messages" type="button" role="tab"
-                                                    aria-controls="v-pills-messages" aria-selected="false"><img
-                                                        src="/assets/images/shoe_3.jpg" class="img-select" alt=""></a>
-                                                <a class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
-                                                    data-bs-target="#v-pills-settings" type="button" role="tab"
-                                                    aria-controls="v-pills-settings" aria-selected="false"><img
-                                                        src="/assets/images/shoe_4.jpg" class="img-select" alt=""></a>
-                                            </div>
-                                            <div class="tab-content" id="v-pills-tabContent">
-                                                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
-                                                    aria-labelledby="v-pills-home-tab">
-                                                    <img class="p-pic" src="assets/images/shoe_1.jpg" />
-                                                </div>
-                                                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
-                                                    aria-labelledby="v-pills-profile-tab">
-                                                    <img class="p-pic xzoom" src="assets/images/shoe_2.jpg" />
-                                                </div>
-                                                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
-                                                    aria-labelledby="v-pills-messages-tab">
-                                                    <img class="p-pic xzoom" src="assets/images/shoe_3.jpg" />
-                                                </div>
-                                                <div class="tab-pane fade" id="v-pills-settings" class="p-pic"
-                                                    role="tabpanel" aria-labelledby="v-pills-settings-tab">
-                                                    <img class="p-pic xzoom" src="assets/images/shoe_4.jpg" />
-                                                </div>
-                                            </div>
+                    <div class="row g-5">
+                        <div class="col-md-5 col-lg-4 order-md-last">
+                            <h4 class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="text-dark">Your cart</span>
+                                <span class="badge bg-primary rounded-pill">3</span>
+                            </h4>
+                            <ul class="list-group mb-3">
+                                <li class="list-group-item d-flex justify-content-between lh-sm">
+                                    <div>
+                                        <h6 class="my-0">Product name</h6>
+                                        <small class="text-muted">Brief description</small>
+                                    </div>
+                                    <span class="text-muted">$12</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between lh-sm">
+                                    <div>
+                                        <h6 class="my-0">Second product</h6>
+                                        <small class="text-muted">Brief description</small>
+                                    </div>
+                                    <span class="text-muted">$8</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between lh-sm">
+                                    <div>
+                                        <h6 class="my-0">Third item</h6>
+                                        <small class="text-muted">Brief description</small>
+                                    </div>
+                                    <span class="text-muted">$5</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between bg-light">
+                                    <div class="text-success">
+                                        <h6 class="my-0">Promo code</h6>
+                                        <small>EXAMPLECODE</small>
+                                    </div>
+                                    <span class="text-success">−$5</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <span>Total (USD)</span>
+                                    <strong>$20</strong>
+                                </li>
+                            </ul>
+                            <form class="card p-2">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Promo code">
+                                    <button type="submit" class="btn btn-primary">Redeem</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-7 col-lg-8">
+                            <h4 class="mb-3">Billing address</h4>
+                            <form class="needs-validation" novalidate>
+                                <div class="row g-3">
+                                    <div class="col-sm-6">
+                                        <label for="firstName">First Name</label>
+                                        <div class="inputWithIcon my-2">
+                                            <input type="firstName" name="firstName" class="form-control" value=""
+                                                placeholder="Enter Your First Name" aria-label="firstName"
+                                                id="firstName" aria-describedby="basic-addon1" autocomplete="on"
+                                                required />
+                                            <i class="material-icons">face</i>
                                         </div>
-                                        <!-- card thumbnails  -->
+                                        <div class="invalid-feedback"> Valid first name is required. </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="lastName">Last Name</label>
+                                        <div class="inputWithIcon my-2">
+                                            <input type="lastName" name="lastName" class="form-control" value=""
+                                                placeholder="Enter Last Name" aria-label="lastName" id="lastName"
+                                                aria-describedby="basic-addon1" autocomplete="on" required />
+                                            <i class="material-icons">face</i>
+                                        </div>
+                                        <div class="invalid-feedback"> Valid last name is required. </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="email">E-mail Address</label>
+                                        <div class="inputWithIcon my-2">
+                                            <input type="email" name="email" class="form-control" value=""
+                                                placeholder="Enter E-mail Address" aria-label="email" id="email"
+                                                aria-describedby="basic-addon1" autocomplete="on" />
+                                            <i class="material-icons">email</i>
+                                        </div>
+                                        <div class="invalid-feedback"> Please enter a valid email address for shipping
+                                            updates. </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="address">Address</label>
+                                        <div class="inputWithIcon my-2">
+                                            <input type="address" name="address" class="form-control" value=""
+                                                placeholder="1234 main Street" aria-label="address" id="address"
+                                                aria-describedby="basic-addon1" autocomplete="on" />
+                                            <i class="material-icons">place</i>
+                                        </div>
+                                        <div class="invalid-feedback"> Please enter your shipping address. </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="address2">Address 2 ( optional )</label>
+                                        <div class="inputWithIcon my-2">
+                                            <input type="address2" name="address2" class="form-control" value=""
+                                                placeholder="Apartment or Suit" aria-label="address" id="address"
+                                                aria-describedby="basic-addon1" autocomplete="on" />
+                                            <i class="material-icons">place</i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <label for="country" class="form-label">Country</label>
+                                        <select class="form-select" id="country" required>
+                                            <option value="">Choose...</option>
+                                            <option>United States</option>
+                                        </select>
+                                        <div class="invalid-feedback"> Please select a valid country. </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="state" class="form-label">State</label>
+                                        <select class="form-select" id="state" required>
+                                            <option value="">Choose...</option>
+                                            <option>California</option>
+                                        </select>
+                                        <div class="invalid-feedback"> Please provide a valid state. </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="zip" class="form-label">Zip</label>
+                                        <input type="text" class="form-control" id="zip" placeholder="" required>
+                                        <div class="invalid-feedback"> Zip code required. </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-12 col-md-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <span class="share"><a href="#" class="btn" role="button"><i
-                                                    class="material-icons">share</i></a>
-                                            <a href="#" class="btn" role="button"><i
-                                                    class="material-icons">favorite_outline</i></a>
-                                        </span>
-                                        <div class="my-1"><a href="#" class="product-link">visit nike store</a>
-                                        </div>
-                                        <h5>Product Title <span class="badge text-danger">new</span></h5>
-                                        <span class="stock text-success"><i class="fa fa-pen"></i> In stock</span>
-                                        <div class="reviews">
-                                            <ul class="stars">
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star" style="color: gray"></i></li>
-                                            </ul>
-                                            <span>(64 reviews)</span>
-                                        </div>
-                                        <div class="p-list">
-                                            <span> Price : <i class="fa fa-inr"></i> <del class="text-danger"> 1399
-                                                </del>
-                                            </span>
-                                            <span class="price"> Rs. 699 </span>
-                                        </div>
-                                        <div class="color my-2">Color : <span> Dark Brown </span></div>
-                                        <span>Size </span>
-                                        <div class="sizes">
-                                            <span class="size">36</span>
-                                            <span class="size">37</span>
-                                            <span class="size">38</span>
-                                            <span class="size">39</span>
-                                            <span class="size">40</span>
-                                            <span class="size">41</span>
-                                            <span class="size">42</span>
-                                            <span class="size">43</span>
-                                        </div>
+                                <hr class="my-4">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="same-address">
+                                    <label class="form-check-label" for="same-address">Shipping address is the same as
+                                        my billing address</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="save-info">
+                                    <label class="form-check-label" for="save-info">Save this information for next
+                                        time</label>
+                                </div>
+                                <hr class="my-4">
+                                <h4 class="mb-3">Payment</h4>
+                                <div class="my-3">
+                                    <div class="form-check">
+                                        <input id="credit" name="paymentMethod" type="radio" class="form-check-input"
+                                            checked required>
+                                        <label class="form-check-label" for="credit">Credit card</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input id="debit" name="paymentMethod" type="radio" class="form-check-input"
+                                            required>
+                                        <label class="form-check-label" for="debit">Debit card</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input id="paypal" name="paymentMethod" type="radio" class="form-check-input"
+                                            required>
+                                        <label class="form-check-label" for="paypal">PayPal</label>
                                     </div>
                                 </div>
-                                <div class="card my-2">
-                                    <div class="card-body">
-                                        <h4 class="card-title">Description</h4>
-                                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ad non quae
-                                            cum corporis quasi voluptatum beatae inventore sequi voluptatibus magnam
-                                            nostrum quod eveniet quibusdam veniam, sapiente doloribus ea. Praesentium
-                                            eos aperiam rem, soluta cum enim numquam quibusdam saepe vero fugit velit
-                                            magni culpa unde quaerat doloremque qui voluptatibus aspernatur! </p>
+                                <div class="row gy-3">
+                                    <div class="col-md-6">
+                                        <label for="cc-name" class="form-label">Name on card</label>
+                                        <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                                        <small class="text-muted">Full name as displayed on card</small>
+                                        <div class="invalid-feedback"> Name on card is required </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="cc-number" class="form-label">Credit card number</label>
+                                        <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                                        <div class="invalid-feedback"> Credit card number is required </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="cc-expiration" class="form-label">Expiration</label>
+                                        <input type="text" class="form-control" id="cc-expiration" placeholder=""
+                                            required>
+                                        <div class="invalid-feedback"> Expiration date required </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="cc-cvv" class="form-label">CVV</label>
+                                        <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                                        <div class="invalid-feedback"> Security code required </div>
                                     </div>
                                 </div>
-                                <div class="d-flex bd-highlight btn-buy my-2">
-                                    <div class="p-2 w-100 bd-highlight"><a id="btn-buy" href="#"
-                                            class="btn btn-primary btn-block w-100"><i
-                                                class="material-icons">shopping_cart</i>Buy Now</a></div>
-                                    <div class="p-2 flex-shrink-1 bd-highlight"><a href="#"
-                                            class="btn btn-primary btn-block"><i class="material-icons">favorite</i>
-                                        </a></div>
-                                </div>
-                            </div>
+                                <hr class="my-4">
+                                <button class="w-100 btn btn-primary" type="submit">Continue to checkout</button>
+                            </form>
                         </div>
                     </div>
-                </div>
+                    <!-- progress indicator  -->
+                    <div class="row g-5">
+                        <ul class="progress">
+                            <li><i class="material-icons" aria-hidden="true">login</i></li>
+                            <li><i class="material-icons" aria-hidden="true">shopping_cart</i></li>
+                            <li><i class="material-icons" aria-hidden="true">event_note</i></li>
+                            <li><i class="material-icons" aria-hidden="true">credit_card</i></li>
+                        </ul>
+                    </div>
+                    <!-- progress indicator  -->
             </main>
             <!-- main contents area ends  -->
             <!-- footer for small screen -->

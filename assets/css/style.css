@@ -243,6 +243,21 @@ header {
   border-radius: 4px 0 0 4px; }
 
 /* css for form */
+.offcanvas.categories .accordion-header button {
+  height: 80px;
+  line-height: 8px;
+  font-weight: 600;
+  font-size: 16px; }
+  .offcanvas.categories .accordion-header button.women {
+    background-color: #be4d25;
+    color: var(--bs-light); }
+  .offcanvas.categories .accordion-header button.men {
+    background-color: #d4ac0d;
+    color: var(--bs-light); }
+  .offcanvas.categories .accordion-header button.kid {
+    background-color: #f5b7b1;
+    color: var(--bs-light); }
+
 .filter {
   overflow-y: auto; }
   .filter .card {
@@ -550,8 +565,6 @@ main .carousel-inner {
       .page-product-detail .product-detail .sizes .size:hover {
         color: var(--bs-primary);
         border: 1px solid var(--bs-primary); }
-  .page-product-detail .product-detail .btn-buy {
-    color: initial; }
   .page-product-detail .product-detail .img-display .nav-link.active {
     background: none; }
   .page-product-detail .product-detail .img-display .p-pic {
@@ -563,6 +576,9 @@ main .carousel-inner {
 
 .welcome-page {
   margin-top: 55px; }
+
+.page-checkout {
+  margin-top: 60px; }
 
 /* css for cards */
 .card .card-header h1,

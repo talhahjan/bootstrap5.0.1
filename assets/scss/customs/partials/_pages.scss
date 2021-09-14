@@ -131,11 +131,12 @@
   margin-top: 60px;
   .product-detail {
     .card-product {
+      position: relative;
+
       margin: 5px;
       border: 0;
       background-color: transparent;
       .card-body {
-        position: relative;
         .share {
           position: absolute;
           top: 10px;
@@ -220,6 +221,10 @@
       }
     }
 
+    .btn-buy {
+      color: initial;
+    }
+
     .img-display {
       .nav-link.active {
         background: none;
@@ -241,8 +246,36 @@
 
 .welcome-page {
   margin-top: 55px;
-}
 
+  .departments {
+   margin: 10px 0;
+   scrollbar-width: none;
+   -ms-overflow-style: none;
+   overflow-y: hidden;
+   height: 80px;
+   display: flex;
+
+   &::-webkit-scrollbar {
+      display: none;
+
+    }
+  & div{
+    cursor: pointer;
+    flex-shrink: 0;
+    margin: 0 10px;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}
+}
 .page-checkout {
   margin-top: 60px;
+  .checkout {
+   
+    margin: 0 auto;
+  }
 }

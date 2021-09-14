@@ -194,17 +194,37 @@
             <!-- main content area start -->
             <main class="checkout">
                 <div class="container">
-                    <div class="progress-container">
-                        <div class="progress-bar" id="progress-bar"></div>
-                        <div class="circle active"><i class="material-icons login">login</i>
+                    <div class="row">
+                        <div class="progressBar">
+                            <div class="step">
+                                <p> Name </p>
+                                <div class="bullet">
+                                    <span>1</span>
+                                </div>
+                                <div class="chec fas fa-check"></div>
+                            </div>
+                            <div class="step">
+                                <p> Contact </p>
+                                <div class="bullet">
+                                    <span>2</span>
+                                </div>
+                                <div class="check fas fa-check"></div>
+                            </div>
+                            <div class="step">
+                                <p> Birth </p>
+                                <div class="bullet">
+                                    <span>3</span>
+                                </div>
+                                <div class="check fas fa-check"></div>
+                            </div>
+                            <div class="step">
+                                <p> Submit </p>
+                                <div class="bullet">
+                                    <span>4</span>
+                                </div>
+                                <div class="check fas fa-check"></div>
+                            </div>
                         </div>
-                        <div class="circle"><i class="material-icons cart">shopping_cart</i></div>
-                        <div class="circle"><i class="material-icons detail">description</i></div>
-                        <div class="circle"><i class="material-icons payment">payment</i></div>
-                    </div>
-                    <div class="ror mt2">
-                        <button class="btn btn-primary" id="prev" disabled>Prev</button>
-                        <button class="btn btn-primary" id="next">Next</button>
                     </div>
                 </div>
             </main>
@@ -312,60 +332,79 @@
                 searchForm.classList.remove('active');
             }
 
+< !--Created By CodingNepal-- >
+const slidePage = document.querySelector(".slide-page");
+            const nextBtnFirst = document.querySelector(".firstNext");
+            const prevBtnSec = document.querySelector(".prev-1");
+            const nextBtnSec = document.querySelector(".next-1");
+            const prevBtnThird = document.querySelector(".prev-2");
+            const nextBtnThird = document.querySelector(".next-2");
+            const prevBtnFourth = document.querySelector(".prev-3");
+            const submitBtn = document.querySelector(".submit");
+            const progressText = document.querySelectorAll(".step p");
+            const progressCheck = document.querySelectorAll(".step .check");
+            const bullet = document.querySelectorAll(".step .bullet");
+            let current = 1;
 
-            const progress = document.getElementById('progress-bar');
-            const prev = document.getElementById('prev');
-            const next = document.getElementById('next');
-            const circles = document.querySelectorAll('.circle');
-
-            let currentActive = 1;
-
-
-            next.addEventListener("click", () => {
-                currentActive++;
-                if (currentActive > circles.length) {
-                    currentActive = circles.length;
-                }
-
-                update();
-
+            nextBtnFirst.addEventListener("click", function (event) {
+                event.preventDefault();
+                slidePage.style.marginLeft = "-25%";
+                bullet[current - 1].classList.add("active");
+                progressCheck[current - 1].classList.add("active");
+                progressText[current - 1].classList.add("active");
+                current += 1;
+            });
+            nextBtnSec.addEventListener("click", function (event) {
+                event.preventDefault();
+                slidePage.style.marginLeft = "-50%";
+                bullet[current - 1].classList.add("active");
+                progressCheck[current - 1].classList.add("active");
+                progressText[current - 1].classList.add("active");
+                current += 1;
+            });
+            nextBtnThird.addEventListener("click", function (event) {
+                event.preventDefault();
+                slidePage.style.marginLeft = "-75%";
+                bullet[current - 1].classList.add("active");
+                progressCheck[current - 1].classList.add("active");
+                progressText[current - 1].classList.add("active");
+                current += 1;
+            });
+            submitBtn.addEventListener("click", function () {
+                bullet[current - 1].classList.add("active");
+                progressCheck[current - 1].classList.add("active");
+                progressText[current - 1].classList.add("active");
+                current += 1;
+                setTimeout(function () {
+                    alert("Your Form Successfully Signed up");
+                    location.reload();
+                }, 800);
             });
 
-            prev.addEventListener("click", () => {
-                currentActive--;
-                if (currentActive < 1) { currentActive = 1; }
-                update();
+            prevBtnSec.addEventListener("click", function (event) {
+                event.preventDefault();
+                slidePage.style.marginLeft = "0%";
+                bullet[current - 2].classList.remove("active");
+                progressCheck[current - 2].classList.remove("active");
+                progressText[current - 2].classList.remove("active");
+                current -= 1;
             });
-
-
-            function update() {
-                circles.forEach((circle, idx) => {
-                    if (idx < currentActive) {
-                        circle.classList.add('active')
-                    }
-                    else { circle.classList.remove('active') }
-
-                });
-                const actives = document.querySelectorAll('.active');
-                console.log(((actives.length - 1) / circles.length) * 100);
-                progress.style.width = (((actives.length - 1) / circles.length) * 100 - 10) + "%";
-                if (currentActive === 1) {
-                    prev.disabled = true;
-                }
-                else if (currentActive === circles.length) {
-                    next.disabled = true;
-
-                }
-                else {
-                    prev.disabled = false;
-                    next.disabled = false;
-                }
-            }
-
-
-
-
-
+            prevBtnThird.addEventListener("click", function (event) {
+                event.preventDefault();
+                slidePage.style.marginLeft = "-25%";
+                bullet[current - 2].classList.remove("active");
+                progressCheck[current - 2].classList.remove("active");
+                progressText[current - 2].classList.remove("active");
+                current -= 1;
+            });
+            prevBtnFourth.addEventListener("click", function (event) {
+                event.preventDefault();
+                slidePage.style.marginLeft = "-50%";
+                bullet[current - 2].classList.remove("active");
+                progressCheck[current - 2].classList.remove("active");
+                progressText[current - 2].classList.remove("active");
+                current -= 1;
+            });
 
 
         </script>

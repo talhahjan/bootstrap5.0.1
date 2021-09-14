@@ -1,78 +1,81 @@
-:root {
-  --line-border-fill: var(--bs-secondary);
-  --line-border-empty: #bdbdbd;
+.container .progressBar {
+  display: flex;
+  margin: 40px 0;
+  user-select: none;
 }
-
-.circle i.login {
-  font-size: 1.8rem;
-  color: var(--bs-pink);
-}
-
-.circle i.cart {
-  font-size: 1.8rem;
-  color: var(--bs-secondary);
-}
-.circle i.detail {
-  font-size: 1.6rem;
-  color: var(--bs-info);
-}
-.circle i.payment {
-  font-size: 1.8rem;
-  color: var(--bs-primary);
-}
-
-.container {
+.container .progressBar .step {
   text-align: center;
-}
-
-.progress-container {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  margin-bottom: 30px;
-  max-width: 100%;
-  width: 350px;
-}
-
-.progress-container::before {
-  content: "";
-  background-color: var(--line-border-empty);
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  height: 4px;
   width: 100%;
-  z-index: -1;
-  transition: 0.8s ease;
-}
-
-.progress-bar {
-  content: "";
-  background-color: var(--line-border-fill);
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  height: 4px;
-  width: 0%;
-  z-index: -1;
-  transition: 0.8s ease;
-}
-
-.circle {
-  background-color: #fff;
-  color: #999;
-  border-radius: 50%;
-  height: 70px;
-  width: 70px;
-  border: 3px solid #b2bec3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
 }
-
-.circle.active {
-  border-color: var(--line-border-fill);
+.container .progressBar .step p {
+  font-weight: 500;
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 8px;
+}
+.progressBar .step .bullet {
+  height: 25px;
+  width: 25px;
+  border: 2px solid #000;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.2s;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
+}
+.progressBar .step .bullet.active {
+  border-color: #d43f8d;
+  background: #d43f8d;
+}
+.progressBar .step .bullet span {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.progressBar .step .bullet.active span {
+  display: none;
+}
+.progressBar .step .bullet:before,
+.progressBar .step .bullet:after {
+  position: absolute;
+  content: "";
+  bottom: 11px;
+  right: -51px;
+  height: 3px;
+  width: 44px;
+  background: #262626;
+}
+.progressBar .step .bullet.active:after {
+  background: #d43f8d;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 0.3s linear forwards;
+}
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+.progressBar .step:last-child .bullet:before,
+.progressBar .step:last-child .bullet:after {
+  display: none;
+}
+.progressBar .step p.active {
+  color: #d43f8d;
+  transition: 0.2s linear;
+}
+.progressBar .step .check {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  font-size: 15px;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.progressBar .step .check.active {
+  display: block;
+  color: #fff;
 }
